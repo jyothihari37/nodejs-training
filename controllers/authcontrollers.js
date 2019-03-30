@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const authservice = require('./services/authservice')
+const authservice = require('../services/authservice')
 router.post('/login', (req, res) => {
     try {
         const { username, password } = req.body;

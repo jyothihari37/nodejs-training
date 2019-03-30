@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const usersservice = require('./services/usersservice');
+const usersservice = require('../services/usersservice');
 router.get('/', (req, res) => {
     const users = usersservice.getUsers()
     //res.json({message:'products route successful'})
