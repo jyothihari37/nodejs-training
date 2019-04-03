@@ -5,12 +5,14 @@ const logisticscontroller = require('./controllers/logisticscontroller')
 const dashboardcontroller = require('./controllers/dashboardcontroller')
 const userscontroller = require('./controllers/userscontroller')
 const authcontroller = require('./controllers/authcontrollers')
+const manufacturercontroller = require('./controllers/manufacturercontroller')
 
 app.use(bodyParser.json())
 app.get('/', (req, res) => {
     res.json({ message: 'hello world' })
 })
 
+app.use('/manufacturer', manufacturercontroller)
 app.use('/auth', authcontroller)
 app.use('/users', userscontroller)
 
